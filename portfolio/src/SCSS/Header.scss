@@ -1,0 +1,40 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.Header_container {
+    width: 100%;
+    height: 70px;
+    background-color: rgb(252, 229, 26);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+
+    .Header_Logo {
+        width: 45px;
+        height: 65%;
+        background-color: #fff;
+        border-radius: 50%;
+    }
+
+    .Header_list {
+        width: 30%;
+        display: flex;
+        justify-content: space-around;
+        font-size: 18px;
+
+        li {
+            list-style-type: none;
+            cursor: pointer;
+
+            &:hover {
+                transform: scale(1.08);
+                transition: all 350ms ease-in;
+            }
+        }
+    }
+
+}
