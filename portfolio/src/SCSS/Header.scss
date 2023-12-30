@@ -31,10 +31,57 @@
             cursor: pointer;
 
             &:hover {
-                transform: scale(1.08);
+                transform: scale(1.09);
                 transition: all 350ms ease-in;
             }
         }
     }
 
+    .Header_Menu {
+        display: none;
+    }
+
+    @media(max-width: 900px) {
+        .Header_list {
+            display: none;
+        }
+        .Header_Menu {
+            display: flex;
+            padding: 8px;
+            background-color: #fff;
+            border-radius: 8px;
+        }
+        @keyframes myAnim {
+            0% {
+                transform: translateY(-100);
+            }
+
+            50% {
+                transform: translateY(-50);
+            }
+
+            100% {
+                transform: translateY(0);
+                
+            }
+        }
+        .Mobile_Header_list {
+            display: flex;
+            width: 20%;
+            height: 130px;
+            background-color: rgb(201, 41, 41);
+            animation: myAnim 5s ease-in;
+            border-radius: 8px;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            list-style-type: none;
+            margin-left: 80%;
+            padding: 13px;
+            // position: fixed;
+            // top: 70px;
+        }
+    }
+
 }
+
