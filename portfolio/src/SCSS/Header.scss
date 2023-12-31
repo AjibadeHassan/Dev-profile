@@ -41,6 +41,10 @@
         display: none;
     }
 
+    .Mobile_Header_list {
+        display: none;
+    }
+
     @media(max-width: 900px) {
         .Header_list {
             display: none;
@@ -71,15 +75,17 @@
             height: 130px;
             background-color: rgb(201, 41, 41);
             animation: myAnim 5s ease-in;
+            transition: all 350ms ease-in;
             border-radius: 8px;
             flex-direction: column;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             justify-content: space-between;
             align-items: center;
             list-style-type: none;
             margin-left: 80%;
             padding: 13px;
-            // position: fixed;
-            // top: 70px;
+            position: fixed;
+            top: 70px;
         }
     }
 
