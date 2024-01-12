@@ -1,0 +1,26 @@
+.Home_container {
+    width: 100%;
+    height: calc(100vh - 70px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5%;
+    font-size: 19px;
+    background-color: rgb(191, 207, 191);
+
+
+    .Home_text {
+        width: 60%;
+    }
+
+    .Home_media {
+        width: 45%;
+        height: 100%;
+        padding: 5%;
+
+        h1 {
+            margin-bottom: 15px;
+            font-size: 40px;
+        }
+    }
+}

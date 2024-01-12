@@ -2,12 +2,14 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .Header_container {
     width: 100%;
     height: 70px;
-    background-color: rgb(252, 229, 26);
+    background-color: rgb(255, 255, 255);
+    color: navy;
     display: flex;
     justify-content: space-between;
     align-items: center;
