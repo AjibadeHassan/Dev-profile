@@ -9,17 +9,27 @@
     width: 100%;
     height: 70px;
     background-color: rgb(255, 255, 255);
-    color: navy;
+    color: rgb(62, 62, 65);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 8px;
 
     .Header_Logo {
-        width: 45px;
-        height: 65%;
+        width: 30%;
+        height: 95%;
+        display: flex;
+        // justify-content: space-between;
         background-color: #fff;
-        border-radius: 50%;
+        // border-radius: 50%;
+        object-fit: contain;
+
+        img {
+            width: 19%;
+            height: 100%;
+            margin-right: 4%;
+            border-radius: 50%;
+        }
     }
 
     .Header_list {
@@ -35,6 +45,7 @@
             &:hover {
                 transform: scale(1.09);
                 transition: all 350ms ease-in;
+                color: rgb(194, 166, 9);
             }
         }
     }
@@ -48,12 +59,25 @@
     }
 
     @media(max-width: 900px) {
+
+        .Header_Logo {
+            width: 90%;
+
+            h1 {
+                width: 70%;
+                font-size: 19px;
+                display: flex;
+                align-items: center;
+            }
+        }
         .Header_list {
             display: none;
         }
         .Header_Menu {
             display: flex;
             padding: 8px;
+            color: black;
+            font-size: 18px;
             background-color: #fff;
             border-radius: 8px;
         }
@@ -73,21 +97,29 @@
         }
         .Mobile_Header_list {
             display: flex;
-            width: 20%;
+            width: 25%;
             height: 130px;
-            background-color: rgb(201, 41, 41);
+            background-color: white;
             animation: myAnim 5s ease-in;
             transition: all 350ms ease-in;
-            border-radius: 8px;
+            // border-radius: 8px;
             flex-direction: column;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             justify-content: space-between;
             align-items: center;
             list-style-type: none;
-            margin-left: 80%;
+            margin-left: 75%;
             padding: 13px;
             position: fixed;
             top: 70px;
+
+            li {
+                &:hover {
+                    cursor: pointer;
+                    color: rgb(194, 166, 9);
+                }
+            }
+          
         }
     }
 

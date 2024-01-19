@@ -1,6 +1,9 @@
 import {useState} from 'react'
+import Logo from '../assets/carefree.jpg'
+import {FiMenu} from 'react-icons/fi'
 
 const Header = () => {
+  const Menuicon : any = <FiMenu/>
   const [menu, setMenu] = useState(false)
 
   const Dropdown=(): void => {
@@ -9,7 +12,8 @@ const Header = () => {
   return (
     <div className="Header_container">
         <span className="Header_Logo">
-            <img src="" alt="Logo" />
+            <img src={Logo} alt="Logo" />
+            <h1>Ajibade Hassan</h1>
         </span>
         <ul className="Header_list">
             <li>About</li>
@@ -17,7 +21,7 @@ const Header = () => {
             <li>Contact</li>
         </ul>
 
-        <div className="Header_Menu" onClick={Dropdown}>Menu</div>
+        <div className="Header_Menu" onClick={Dropdown}>{Menuicon}</div>
         {
           menu? (
         <ul className="Mobile_Header_list">

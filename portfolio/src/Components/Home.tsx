@@ -1,13 +1,16 @@
 // import React from 'react'
+// import Logo from '../assets/carefree.jpg'
+import { FaXTwitter } from "react-icons/fa6";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 const Home = () => {
   return (
     <div className="Home_container">
      <article className="Home_media">
-     <span className="Social_icons">
-
-</span>
-<img src="" alt="" />
+      <span><FaXTwitter/></span>
+      <span><FaLinkedin/></span>
+      <span><FaGithub/></span>
+      <span></span>
      </article>
       <article className="Home_text">
         <h1>Hi, I'm Ajibade Hassan</h1>
