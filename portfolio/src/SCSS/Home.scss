@@ -15,7 +15,12 @@
     .Home_text {
         width: 90%;
         padding: 10%;
+        display: flex;
+        flex-direction: column;
         color: rgb(62, 62, 65);
+        align-items: center;
+
+
         
         h1{
             text-align: center;
@@ -42,6 +47,15 @@
                 cursor: pointer;
             }
         }
+    }
+
+    .Home_Btn {
+        width: 200px;
+        text-align: center;
+        font-style: bold;
+        border-radius: 8px;
+        background-color: rgb(202, 178, 39);
+        padding: 15px;
     }
 
 

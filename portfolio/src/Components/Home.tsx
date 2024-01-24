@@ -10,7 +10,6 @@ const Home = () => {
       <span><FaXTwitter/></span>
       <span><FaLinkedin/></span>
       <span><FaGithub/></span>
-      <span></span>
      </article>
       <article className="Home_text">
         <h1>Hi, I'm Ajibade Hassan</h1>
@@ -18,6 +17,8 @@ const Home = () => {
           Neque odit labore doloribus in alias ea pariatur laborum,
           officiis saepe? Pariatur aliquam eius praesentium impedit
            ipsam eaque voluptatem, assumenda quae ex.</p>
+      <span className="Home_Btn">Projects</span>
+
       </article>
     </div>
   )
