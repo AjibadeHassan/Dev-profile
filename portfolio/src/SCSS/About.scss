@@ -2,10 +2,58 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    color: rgb(29, 28, 28);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
 }
 
 .About_Container {
     width: 100%;
     height: 100vh;
-    background-color: rgb(247, 245, 245);
+    background-color: rgb(253, 252, 252);
+    padding: 15px;
+    padding-top: 10%;
+    // display: flex;
+
+    .About_Header {
+        width: 100%;
+        height: 25vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h1 {
+            font-size: 37px;
+            padding-bottom: 15px;
+        }
+
+        span {
+            width: 60px;
+            border-radius: 7px;
+            // margin-bottom: 5px;
+            height: 4px;
+        background-color: rgb(202, 178, 39);
+        }
+        p {
+            width: 70%;
+            font-size: 18px;
+            text-align: center;
+            padding-top: 15px;
+        }
+
+    }
+
+    .About_body {
+        width: 100%;
+        height: 72vh;
+        display: flex;
+        justify-content: space-between;
+
+        .About_details {
+            width: 45%;
+            height: 90%;
+            padding: 10px;
+        }
+    }
+
 }

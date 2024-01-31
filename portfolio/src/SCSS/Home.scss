@@ -56,6 +56,12 @@
         border-radius: 8px;
         background-color: rgb(202, 178, 39);
         padding: 15px;
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(1.08);
+            transition: all 350ms ease-in;
+        }
     }
 
 
