@@ -13,10 +13,9 @@ const Home = () => {
      </article>
       <article className="Home_text">
         <h1>Hi, I'm Ajibade Hassan</h1>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-          Neque odit labore doloribus in alias ea pariatur laborum,
-          officiis saepe? Pariatur aliquam eius praesentium impedit
-           ipsam eaque voluptatem, assumenda quae ex.</p>
+        <p>I'm a Frontend Web Developer building the Front-end of Websites 
+          and Web Applications that leads to the success of the overall product.
+           Check out some of my work in the Projects section.</p>
       <span className="Home_Btn">Projects</span>
 
       </article>

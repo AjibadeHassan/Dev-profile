@@ -52,7 +52,67 @@
         .About_details {
             width: 45%;
             height: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             padding: 10px;
+
+            h2 {
+                padding: 20px 10px;
+                font-size: xx-large;
+            }
+
+            p {
+                font-size: 18px;
+                font-weight: 500;
+                margin-bottom: 10px;
+            }
+
+            .About_Btn {
+                width: 200px;
+                text-align: center;
+                font-weight: 600;
+                border-radius: 8px;
+                background-color: rgb(202, 178, 39);
+                padding: 15px;
+                cursor: pointer;
+        
+                &:hover {
+                    transform: scale(1.08);
+                    transition: all 350ms ease-in;
+                }
+            }
+
+        }
+
+        .About_skills {
+            width: 45%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h2 {
+                padding: 20px 10px;
+            }
+
+            .Skills_container {
+                width: 100%;
+                height: 30%;
+                display: flex;
+                // color: grey;
+                flex-wrap: wrap;
+               
+                .Skill_Card {
+                    width: max-content;
+                    height: max-content;
+                    padding: 15px;
+                    font-weight: 500;
+                    background-color: rgb(180, 177, 177);
+                    margin: 3px 7px;
+                    border-radius: 5px;
+                }
+            }
         }
     }
 

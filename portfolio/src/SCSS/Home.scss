@@ -49,10 +49,14 @@
         }
     }
 
+    p {
+        padding: 15px;
+    }
+
     .Home_Btn {
         width: 200px;
         text-align: center;
-        font-style: bold;
+        font-weight: 600;
         border-radius: 8px;
         background-color: rgb(202, 178, 39);
         padding: 15px;

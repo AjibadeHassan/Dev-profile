@@ -1,6 +1,11 @@
 // import React from 'react'
 
+// import { useState } from "react"
+
 const About = () => {
+
+  // const [skills, setSkills] = useState()
+  const mySkills: Array<string> = ['Git', 'HTML', 'CSS','SASS', 'Javascript', 'Reactjs', 'SEO','Rensponsive Design', 'Github', 'Terminal', 'Express Basics', 'SQL Basics' ]
   return (
     <div className='About_Container'>
         <section className="About_Header">
@@ -13,6 +18,26 @@ const About = () => {
         <section className="About_body">
           <div className="About_details">
             <h2>Get To Know Me!</h2>
+            <p>I'm a Frontend Web Developer building the Front-end of Websites and Web Applications 
+              that leads to the success of the overall product. Check out some of my work in the Projects section.
+            </p>
+            <p>
+            I'm open to Job opportunities where I can contribute, learn and grow.
+             If you have a good opportunity that matches my skills and experience then don't hesitate to contact me.
+            </p>
+            <span className="About_Btn">Contact</span>
+          </div>
+          <div className="About_skills">
+            <h2>My Skills!</h2>
+            <section className="Skills_container">
+            {
+              mySkills.map((props)=>(
+                <span className="Skill_Card">{props}</span>
+
+              ))
+            }
+            </section>
+            
           </div>
         </section>
     </div>
