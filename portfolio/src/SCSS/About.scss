@@ -116,4 +116,27 @@
         }
     }
 
+    @media(max-width:800px) {
+        .About_Header {
+            p {
+                width: 100%;
+            }
+        }
+       .About_body {
+        flex-direction: column;
+        height: max-content;
+
+        .About_details {
+            width: 90%;
+            margin-bottom: 10px;
+        }
+
+        .About_skills {
+            width: 90%;
+            padding: 10px;
+        }
+
+       }
+    }
+
 }
