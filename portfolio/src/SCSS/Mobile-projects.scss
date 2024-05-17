@@ -1,0 +1,27 @@
+@media(max-width:800px) {
+    .Project_container {
+     margin-top: 20%;
+
+
+     .Project_slide {
+        width: 100%;
+         .Project_Card {
+             flex-direction: column;
+            .Img_container {
+                width: 100%;
+            }
+            
+            .Description_name {
+                width: 100%;
+            }
+         }
+     }
+    
+    }
+//     .Project_Card {
+//         flex-direction: column;
+//     }
+//     }
+// }
+
+}

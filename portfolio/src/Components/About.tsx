@@ -5,12 +5,12 @@
 const About = () => {
 
   // const [skills, setSkills] = useState()
-  const mySkills: Array<string> = ['Git', 'HTML', 'CSS','SASS', 'Javascript', 'Reactjs', 'SEO','Rensponsive Design', 'Github', 'Terminal', 'Express Basics', 'SQL Basics' ]
+  const mySkills: Array<string> = ['Git', 'HTML', 'CSS','SCSS', 'Javascript', 'Reactjs', 'SEO','Rensponsive Design', 'Github', 'Terminal', 'Node.js','Express', 'MongoDB','Mongoose','Jest' ]
   return (
     <div className='About_Container'>
         <section className="About_Header">
           <h1>ABOUT ME</h1>
-          <span></span>
+          <span id='aboutid'></span>
           <p>Here you will find more information about me,
              what I do, and my current skills mostly in terms
               of programming and technology</p>
@@ -32,7 +32,7 @@ const About = () => {
             <section className="Skills_container">
             {
               mySkills.map((props)=>(
-                <span className="Skill_Card">{props}</span>
+                <span  key={props} className="Skill_Card">{props}</span>
 
               ))
             }

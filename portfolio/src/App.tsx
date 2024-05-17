@@ -7,6 +7,7 @@ import './SCSS/Header.scss'
 import './SCSS/Home.scss'
 import './SCSS/About.scss'
 import './SCSS/Projects.scss'
+import './SCSS/Mobile-projects.scss'
 const App = () => {
   return (
     <div>

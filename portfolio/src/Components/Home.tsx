@@ -12,8 +12,9 @@ const Home = () => {
       <span><FaGithub/></span>
      </article>
       <article className="Home_text">
-        <h1>Hi, I'm Ajibade Hassan</h1>
-        <p>I'm a Frontend Web Developer building the Front-end of Websites 
+        <h1>Hi, I'm Ajibade Hassan.</h1>
+        <p>I'm a MERN Stack Web Developer building the Front-end and Back-end of projects as well as the
+           integration between the client side and the server-side of Websites 
           and Web Applications that leads to the success of the overall product.
            Check out some of my work in the Projects section.</p>
       <span className="Home_Btn">Projects</span>
