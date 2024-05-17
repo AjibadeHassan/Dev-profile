@@ -2,6 +2,7 @@
     width: 100%;
     height: max-content;
     padding: 40px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: rgb(235, 232, 232);
 
     .Project_header {
@@ -27,6 +28,7 @@
 
         p {
             font-size: 20px;
+            font-weight: 500;
         }
     }
 
@@ -69,6 +71,10 @@
                     font-size: 24px;
                     font-weight: 700;
                     padding: 20px;
+                }
+
+                p {
+                    font-weight: 500;
                 }
             }
         }

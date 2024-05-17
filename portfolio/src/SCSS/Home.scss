@@ -4,7 +4,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    // padding: 5%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 19px;
     background-image: url('../assets/portfolio\ background.jpg');
     background-position: center;
@@ -16,6 +16,7 @@
         width: 90%;
         padding: 10%;
         display: flex;
+        font-weight: 500;
         flex-direction: column;
         color: rgb(62, 62, 65);
         align-items: center;
