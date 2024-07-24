@@ -1,0 +1,114 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.Contacts_Container {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6%;
+    background-image: url('../assets/portfolio\ background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    h1 {
+        font-weight: 750;
+        font-size: 40px;
+        padding: 15px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    span {
+        width: 30px;
+        height: 4px;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        background-color: rgb(202, 178, 39);
+    }
+
+    p {
+        width: 65%;
+        text-align: center;
+        // background-color: red;
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    form {
+        width: 70%;
+        height: 120vh;
+        display: flex;
+        border-radius: 1%;
+        margin-top: 70px;
+        flex-direction: column;
+        // align-items: center;
+        padding: 5%;
+        box-shadow: 5px 9px 35px 0px rgba(87,77,87,0.63);;
+        background-color: #fff;
+
+        label {
+            margin-left: 50px;
+            margin-bottom: 7px;
+            font-weight: 500;
+            color: grey;
+        }
+
+        input {
+            width: 90%;
+            height: 35px;
+            padding: 30px;
+            border: none;
+            border-radius: 3%;
+            outline: none;
+            background-color: rgb(236, 236, 236);
+            margin: 50px;
+            margin-top: 0;
+
+            &::placeholder {
+                font-size: 18px;
+            }
+        }
+
+        textarea {
+            width: 90%;
+            height: 90vh;
+            padding: 30px;
+            border: none;
+            border-radius: 3%;
+            outline: none;
+            resize: none;
+            background-color: rgb(236, 236, 236);
+            margin: 50px;
+            margin-top: 0;
+
+            &::placeholder {
+                font-size: 18px;
+            }
+
+            
+    
+
+        }
+        .Home_Btn {
+            width: 200px;
+            text-align: center;
+            font-weight: 600;
+            border-radius: 8px;
+            border: none;
+            margin-left: 50px;
+            background-color: rgb(202, 178, 39);
+            padding: 15px;
+            cursor: pointer;
+    
+            &:hover {
+                transform: scale(1.08);
+                transition: all 350ms ease-in;
+            }
+        }
+    }
+
+}

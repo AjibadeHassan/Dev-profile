@@ -3,11 +3,13 @@ import Header from "./Components/Header"
 import Home from "./Components/Home"
 import About from "./Components/About"
 import Projects from "./Components/Projects"
+import Contacts from "./Components/contacts."
 import './SCSS/Header.scss'
 import './SCSS/Home.scss'
 import './SCSS/About.scss'
 import './SCSS/Projects.scss'
 import './SCSS/Mobile-projects.scss'
+import './SCSS/Contact.scss'
 const App = () => {
   return (
     <div>
@@ -15,6 +17,7 @@ const App = () => {
       <Home/>
       <About/>
       <Projects/>
+      <Contacts/>
     </div>
   )
 }
