@@ -10,6 +10,7 @@ import './SCSS/About.scss'
 import './SCSS/Projects.scss'
 import './SCSS/Mobile-projects.scss'
 import './SCSS/Contact.scss'
+import './SCSS/Mobile-contacts.scss'
 const App = () => {
   return (
     <div>

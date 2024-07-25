@@ -1,0 +1,30 @@
+@media(max-width : 800px) {
+    .Contacts_Container {
+
+        height: 130vh;
+        p {
+            width: 90%;
+            font-size: 15px;
+        }
+
+        form {
+            width: 97%;
+
+
+
+
+            label {
+                margin-bottom: 1px;
+            }
+
+            input {
+                margin: 15px;
+            }
+
+            textarea {
+                margin: 15px;
+                height: 40vh;
+            }
+        }
+    }
+}
