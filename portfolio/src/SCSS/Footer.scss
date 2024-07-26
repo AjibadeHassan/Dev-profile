@@ -41,6 +41,19 @@
             color: white;
             }
         }
+
+        h1 {
+            padding: 5%;
+        }
+        .Social_Icons {
+            width: 4%;
+            font-size: 25px;
+            padding: 3%;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
     }
 
     .Footer_Bottom {
