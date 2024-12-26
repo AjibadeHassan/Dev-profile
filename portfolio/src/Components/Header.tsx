@@ -1,6 +1,7 @@
 import {useState} from 'react'
 import Logo from '../assets/carefree.jpg'
 import {FiMenu} from 'react-icons/fi'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
   const Menuicon : any = <FiMenu/>
@@ -16,18 +17,18 @@ const Header = () => {
             <h1>Ajibade Hassan</h1>
         </span>
         <ul className="Header_list">
-            <li>About</li>
-            <li>Projects</li>
-            <li>Contact</li>
+            <li><Link style={{listStyleType :'none', textDecoration: 'none'}} to="/about">About</Link></li>
+            <li><Link style={{listStyleType :'none', textDecoration: 'none'}} to="/projects">Projects</Link></li>
+            <li><Link style={{listStyleType :'none', textDecoration: 'none'}} to="/contacts">Contact</Link></li>
         </ul>
 
         <div className="Header_Menu" onClick={Dropdown}>{Menuicon}</div>
         {
           menu? (
         <ul className="Mobile_Header_list">
-            <li>About</li>
-            <li>Projects</li>
-            <li>Contact</li>
+            <li><Link style={{listStyleType :'none', textDecoration: 'none'}} to="/about">About</Link></li>
+            <li><Link style={{listStyleType :'none', textDecoration: 'none'}} to="/projects">Projects</Link></li>
+            <li><Link style={{listStyleType :'none', textDecoration: 'none'}} to="/contacts">Contact</Link></li>
         </ul>
           ) : null
         }

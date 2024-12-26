@@ -13,15 +13,20 @@ import './SCSS/Mobile-projects.scss'
 import './SCSS/Contact.scss'
 import './SCSS/Footer.scss'
 import './SCSS/Mobile-contacts.scss'
+import { Route, Routes } from "react-router-dom"
 const App = () => {
   return (
     <div>
       <Header/>
-      <Home/>
-      <About/>
-      <Projects/>
-      <Contacts/>
+      <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/about" element={<About/>}/>
+          <Route path="/projects" element={<Projects/>}/>
+          <Route path="/contacts" element={<Contacts/>}/>
+      </Routes>
       <Footer/>
+
+
     </div>
   )
 }
