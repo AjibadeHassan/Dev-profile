@@ -41,7 +41,10 @@ const Contacts: React.FC = () => {
           <input type="email" id="email" name="email" placeholder="enter your email address" title="email" />
           <label htmlFor="message">Message</label>
           <textarea name="message" placeholder="enter your message" id="message"></textarea>
-          <button className="Home_Btn" type="submit">Submit</button>
+          <button onClick={()=> {
+            alert('Thank you for your message, I will get back to you as soon as possible');
+            window.location.reload();
+          }} className="Home_Btn" type="submit">Submit</button>
         </form>
     </div>
   );

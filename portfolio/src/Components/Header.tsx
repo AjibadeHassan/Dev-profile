@@ -17,6 +17,7 @@ const Header = () => {
             <h1>Ajibade Hassan</h1>
         </span>
         <ul className="Header_list">
+        <li><Link style={{listStyleType :'none', textDecoration: 'none'}} to="/">Home</Link></li>
             <li><Link style={{listStyleType :'none', textDecoration: 'none'}} to="/about">About</Link></li>
             <li><Link style={{listStyleType :'none', textDecoration: 'none'}} to="/projects">Projects</Link></li>
             <li><Link style={{listStyleType :'none', textDecoration: 'none'}} to="/contacts">Contact</Link></li>
@@ -26,6 +27,7 @@ const Header = () => {
         {
           menu? (
         <ul className="Mobile_Header_list">
+        <li><Link style={{listStyleType :'none', textDecoration: 'none'}} to="/">Home</Link></li>
             <li><Link style={{listStyleType :'none', textDecoration: 'none'}} to="/about">About</Link></li>
             <li><Link style={{listStyleType :'none', textDecoration: 'none'}} to="/projects">Projects</Link></li>
             <li><Link style={{listStyleType :'none', textDecoration: 'none'}} to="/contacts">Contact</Link></li>
