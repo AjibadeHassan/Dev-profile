@@ -5,7 +5,7 @@
 const About = () => {
 
   // const [skills, setSkills] = useState()
-  const mySkills: Array<string> = ['Git', 'HTML', 'CSS','SCSS', 'Javascript', 'Reactjs', 'SEO','Rensponsive Design', 'Github', 'Terminal', 'Node.js','Express', 'MongoDB','Mongoose','Jest' ]
+  const mySkills: Array<string> = ['Git', 'HTML', 'CSS','SCSS', 'Javascript', 'Reactjs', 'SEO','Rensponsive Design', 'Github', 'Terminal', 'Python','Django', 'MySql','Jest' ]
   return (
     <div className='About_Container'>
         <section className="About_Header">
@@ -18,7 +18,7 @@ const About = () => {
         <section className="About_body">
           <div className="About_details">
             <h2>Get To Know Me!</h2>
-            <p>I'm a Frontend Web Developer building the Front-end of Websites and Web Applications 
+            <p>I'm a Fullstack Web Developer building the Front-end and Back-end of Websites and Web Applications 
               that leads to the success of the overall product. Check out some of my work in the Projects section.
             </p>
             <p>
