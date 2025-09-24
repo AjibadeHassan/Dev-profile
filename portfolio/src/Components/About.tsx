@@ -4,7 +4,7 @@
 
 const About = () => {
 
-  // const [skills, setSkills] = useState()
+
   const mySkills: Array<string> = ['Git', 'HTML', 'CSS','SCSS', 'Javascript', 'Reactjs', 'SEO','Rensponsive Design', 'Github', 'Terminal', 'Python','Django', 'MySql','Jest', 'Docker', 'Rest API', 'PostGreSQL']
   return (
     <div className='About_Container'>
