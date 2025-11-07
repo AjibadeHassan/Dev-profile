@@ -2,30 +2,36 @@ import React, { useRef } from 'react';
 
 const Contacts: React.FC = () => {
   const form = useRef<HTMLFormElement>(null);
+const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
 
-  const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  if (form.current) {
+    const formData = new FormData(form.current);
 
-    if (form.current) {
-      const formData = new FormData(form.current);
-      try {
-        const response = await fetch('https://formspree.io/f/movvjygq', {
-          method: 'POST',
-          body: formData,
-          headers: {
-            'Accept': 'application/json'
-          }
-        });
-        if (response.ok) {
-          console.log('Email sent successfully');
-        } else {
-          console.log('Failed to send email');
-        }
-      } catch (error) {
-        console.log('Error:', error);
+    try {
+      const response = await fetch('https://hassan-ajibade-portfolio.onrender.com/api/contact/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.get('name'),
+          email: formData.get('email'),
+          message: formData.get('message'),
+        }),
+      });
+
+      if (response.ok) {
+        console.log('Message sent 🎉');
+      } else {
+        console.log('Failed to send ❌');
       }
+    } catch (error) {
+      console.log('Error:', error);
     }
-  };
+  }
+};
+
 
   return (
     <div className="Contacts_Container">
