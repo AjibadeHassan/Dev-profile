@@ -1,35 +1,30 @@
 import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 const Contacts: React.FC = () => {
   const form = useRef<HTMLFormElement>(null);
-const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
+
+const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
   e.preventDefault();
 
-  if (form.current) {
-    const formData = new FormData(form.current);
+  if (!form.current) return;
 
-    try {
-      const response = await fetch('https://hassan-ajibade-portfolio.onrender.com/api/contact/', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          name: formData.get('name'),
-          email: formData.get('email'),
-          message: formData.get('message'),
-        }),
-      });
-
-      if (response.ok) {
-        console.log('Message sent 🎉');
-      } else {
-        console.log('Failed to send ❌');
-      }
-    } catch (error) {
-      console.log('Error:', error);
-    }
-  }
+  emailjs
+    .sendForm(
+      "service_ixvm20l",
+      "template_1ujszuw",
+      form.current,
+      "aNbg8Un7hiLbZ46Ns"
+    )
+    .then(() => {
+      console.log("Message sent");
+      alert("Message sent successfully!");
+      form.current?.reset(); // optional reset
+    })
+    .catch((error: any) => {
+      console.error("Failed to send", error);
+      alert("Failed to send message. Try again.");
+    });
 };
 
 
@@ -38,7 +33,7 @@ const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
         <h1>CONTACT</h1>
         <span></span>
         <p>Feel free to Contact me by submitting the form below and
-             I will get back to you as soon as possible
+             I will get back to you as soon as possible.
         </p>
         <form ref={form} onSubmit={sendEmail}>
           <label htmlFor="name">Name</label>

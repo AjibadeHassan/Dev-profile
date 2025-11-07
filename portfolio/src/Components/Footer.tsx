@@ -9,7 +9,7 @@ const Footer = () => {
                 <span>
                     <h1>AJIBADE HASSAN</h1>
                     <p>
-                    I'm a MERN Stack Web Developer building the Front-end and Back-end of projects.</p>
+                    I'm a Full-Stack Web Developer building the Front-end and Back-end of projects.</p>
                 </span>
                 <span className="Social_Container">
                   <h1>SOCIAL</h1>
