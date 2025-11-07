@@ -48,8 +48,8 @@ const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
           <label htmlFor="message">Message</label>
           <textarea name="message" placeholder="enter your message" id="message"></textarea>
           <button onClick={()=> {
-            alert('Thank you for your message, I will get back to you as soon as possible');
-            window.location.reload();
+            // alert('Thank you for your message, I will get back to you as soon as possible');
+            // window.location.reload();
           }} className="Home_Btn" type="submit">Submit</button>
         </form>
     </div>
