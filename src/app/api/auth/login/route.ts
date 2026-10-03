@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { db } from '@/lib/db'
-import { verifyPassword, generateToken, serializeUser } from '@/lib/auth'
-import { serializeUser as serializeU } from '@/lib/serializers'
+import { verifyPassword, generateToken } from '@/lib/auth'
+import { serializeUser } from '@/lib/serializers'
 
 export async function POST(req: NextRequest) {
   try {
@@ -47,7 +47,7 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json({
       token,
-      user: serializeU(user),
+      user: serializeUser(user),
     })
   } catch (error: any) {
     return NextResponse.json(

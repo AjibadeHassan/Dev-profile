@@ -28,7 +28,7 @@ interface AuthStore {
   updateUser: (user: Partial<User>) => void
 }
 
-export const useAuthStore = create<AuthStore>(
+export const useAuthStore = create<AuthStore>()(
   persist(
     (set, get) => ({
       user: null,
