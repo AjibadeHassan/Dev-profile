@@ -1,0 +1,59 @@
+import type { Metadata } from "next";
+import { Geist, Geist_Mono } from "next/font/google";
+import "./globals.css";
+import { Toaster } from "@/components/ui/toaster";
+import { Toaster as SonnerToaster } from "@/components/ui/sonner";
+
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+export const metadata: Metadata = {
+  title: "E-Hospital — Healthcare Management System",
+  description:
+    "A comprehensive healthcare management system connecting patients, doctors, and care teams. Book appointments, manage medical records, prescriptions, and more.",
+  keywords: [
+    "E-Hospital",
+    "Healthcare",
+    "Hospital Management",
+    "Appointments",
+    "Medical Records",
+    "Prescriptions",
+    "Next.js",
+  ],
+  authors: [{ name: "E-Hospital Team" }],
+  openGraph: {
+    title: "E-Hospital — Healthcare Management System",
+    description: "Connecting patients, doctors, and care teams in one secure platform.",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "E-Hospital",
+    description: "Healthcare Management System",
+  },
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en" suppressHydrationWarning>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
+      >
+        {children}
+        <Toaster />
+        <SonnerToaster richColors position="top-right" />
+      </body>
+    </html>
+  );
+}
