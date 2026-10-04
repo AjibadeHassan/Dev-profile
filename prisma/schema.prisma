@@ -1,5 +1,5 @@
-// E-Hospital Application - Prisma Schema
-// Ported from the Django backend models
+// Portfolio — Prisma schema
+// Stores contact form submissions
 
 generator client {
   provider = "prisma-client-js"
@@ -10,141 +10,11 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model User {
-  id             String   @id @default(cuid())
-  username       String   @unique
-  email          String   @unique
-  password       String
-  firstName      String
-  lastName       String
-  role           String   @default("patient") // patient, doctor, nurse, admin, pharmacist
-  phoneNumber    String   @default("")
-  dateOfBirth    DateTime?
-  gender         String   @default("") // M, F, O
-  address        String   @default("")
-  city           String   @default("")
-  country        String   @default("")
-  medicalLicense String   @default("")
-  specialization String   @default("")
-  bio            String   @default("")
-  isVerified     Boolean  @default(false)
-  isActive       Boolean  @default(true)
-  createdAt      DateTime @default(now())
-  updatedAt      DateTime @updatedAt
-
-  appointmentsAsPatient  Appointment[]           @relation("PatientAppointments")
-  appointmentsAsDoctor   Appointment[]           @relation("DoctorAppointments")
-  medicalRecords         MedicalRecord[]         @relation("PatientMedicalRecords")
-  medicalRecordsAsDoctor MedicalRecord[]         @relation("DoctorMedicalRecords")
-  prescriptions          Prescription[]          @relation("PatientPrescriptions")
-  prescriptionsAsDoctor  Prescription[]          @relation("DoctorPrescriptions")
-  notifications          Notification[]
-  notificationPreference NotificationPreference?
-  departmentHead         Department?             @relation("DepartmentHead")
-}
-
-model Department {
-  id          String   @id @default(cuid())
-  name        String   @unique
-  description String   @default("")
-  headId      String?  @unique
-  head        User?    @relation("DepartmentHead", fields: [headId], references: [id])
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
-  appointments Appointment[]
-}
-
-model Appointment {
-  id              String   @id @default(cuid())
-  patientId       String
-  doctorId        String
-  departmentId    String?
-  appointmentDate DateTime
-  durationMinutes Int      @default(30)
-  reason          String
-  status          String   @default("scheduled") // scheduled, completed, cancelled, no_show
-  notes           String   @default("")
-  createdAt       DateTime @default(now())
-  updatedAt       DateTime @updatedAt
-
-  patient    User        @relation("PatientAppointments", fields: [patientId], references: [id])
-  doctor     User        @relation("DoctorAppointments", fields: [doctorId], references: [id])
-  department Department? @relation(fields: [departmentId], references: [id])
-}
-
-model MedicalRecord {
-  id              String   @id @default(cuid())
-  patientId       String
-  doctorId        String?
-  recordType      String   @default("diagnosis") // diagnosis, treatment, lab_result, imaging, vaccination, surgery, other
-  title           String
-  description     String
-  findings        String   @default("")
-  recommendations String   @default("")
-  recordDate      DateTime
-  fileUrl         String   @default("")
-  isVerified      Boolean  @default(false)
-  createdAt       DateTime @default(now())
-  updatedAt       DateTime @updatedAt
-
-  patient User  @relation("PatientMedicalRecords", fields: [patientId], references: [id])
-  doctor  User? @relation("DoctorMedicalRecords", fields: [doctorId], references: [id])
-}
-
-model Prescription {
-  id               String   @id @default(cuid())
-  patientId        String
-  doctorId         String?
-  prescriptionDate DateTime @default(now())
-  issueDate        DateTime
-  expiryDate       DateTime
-  notes            String   @default("")
-  isActive         Boolean  @default(true)
-  status           String   @default("active") // active, dispensed, refilled, expired, cancelled
-  // Medication details (denormalized for simplicity)
-  medicineName     String
-  genericName      String   @default("")
-  strength         String
-  form             String   @default("tablet")
-  manufacturer     String   @default("")
-  dosage           String
-  frequency        String
-  duration         String
-  instructions     String   @default("")
-  quantity         Int      @default(1)
-  refills          Int      @default(0)
-  refillsRemaining Int      @default(0)
-  createdAt        DateTime @default(now())
-  updatedAt        DateTime @updatedAt
-
-  patient User  @relation("PatientPrescriptions", fields: [patientId], references: [id])
-  doctor  User? @relation("DoctorPrescriptions", fields: [doctorId], references: [id])
-}
-
-model Notification {
-  id               String   @id @default(cuid())
-  userId           String
-  notificationType String   @default("system") // appointment, prescription, medical_record, message, system
-  title            String
-  message          String
-  relatedObjectUrl String   @default("")
-  isRead           Boolean  @default(false)
-  createdAt        DateTime @default(now())
-
-  user User @relation(fields: [userId], references: [id])
-}
-
-model NotificationPreference {
-  id                  String  @id @default(cuid())
-  userId              String  @unique
-  emailNotifications  Boolean @default(true)
-  pushNotifications   Boolean @default(true)
-  smsNotifications    Boolean @default(false)
-  appointmentReminder Boolean @default(true)
-  prescriptionReady   Boolean @default(true)
-  medicalRecordUpdate Boolean @default(true)
-  systemAlerts        Boolean @default(true)
-  reminderHoursBefore Int     @default(24)
-
-  user User @relation(fields: [userId], references: [id])
+model Message {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  message   String
+  read      Boolean  @default(false)
+  createdAt DateTime @default(now())
 }

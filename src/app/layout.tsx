@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as SonnerToaster } from "@/components/ui/sonner";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,28 +16,29 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "E-Hospital — Healthcare Management System",
+  title: "Ajibade Hassan — Full-Stack Web Developer",
   description:
-    "A comprehensive healthcare management system connecting patients, doctors, and care teams. Book appointments, manage medical records, prescriptions, and more.",
+    "Portfolio of Ajibade Hassan, a Full-Stack Web Developer building modern web applications with React, Next.js, TypeScript, Django, and more.",
   keywords: [
-    "E-Hospital",
-    "Healthcare",
-    "Hospital Management",
-    "Appointments",
-    "Medical Records",
-    "Prescriptions",
+    "Ajibade Hassan",
+    "Full-Stack Developer",
+    "Web Developer",
+    "React",
     "Next.js",
+    "TypeScript",
+    "Django",
+    "Portfolio",
   ],
-  authors: [{ name: "E-Hospital Team" }],
+  authors: [{ name: "Ajibade Hassan" }],
   openGraph: {
-    title: "E-Hospital — Healthcare Management System",
-    description: "Connecting patients, doctors, and care teams in one secure platform.",
+    title: "Ajibade Hassan — Full-Stack Web Developer",
+    description: "Building modern web applications with React, Next.js, TypeScript, and Django.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "E-Hospital",
-    description: "Healthcare Management System",
+    title: "Ajibade Hassan — Full-Stack Web Developer",
+    description: "Building modern web applications with React, Next.js, TypeScript, and Django.",
   },
 };
 
@@ -51,9 +53,16 @@ export default function RootLayout({
         suppressHydrationWarning
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
       >
-        {children}
-        <Toaster />
-        <SonnerToaster richColors position="top-right" />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+          <Toaster />
+          <SonnerToaster richColors position="top-right" />
+        </ThemeProvider>
       </body>
     </html>
   );
