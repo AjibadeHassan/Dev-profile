@@ -52,3 +52,16 @@ prompt
 server.log
 # Skills directory
 /skills/
+
+# Sandbox-internal files (not part of the application)
+/.zscripts/
+/download/
+/examples/
+/tests/
+/mini-services/
+Caddyfile
+worklog.md
+
+# Database file (regenerable via POST /api/seed)
+/db/*.db
+/db/*.db-journal
