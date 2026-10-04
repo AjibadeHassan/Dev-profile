@@ -18,26 +18,29 @@ export default function HeroSection() {
       id="home"
       className="relative min-h-screen flex items-center pt-20 pb-12 overflow-hidden"
     >
-      {/* Background gradient */}
+      {/* Background gradient — blue mesh */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 via-transparent to-teal-500/5" />
-        <div className="absolute top-1/4 -left-32 h-96 w-96 rounded-full bg-emerald-500/10 blur-3xl" />
-        <div className="absolute bottom-1/4 -right-32 h-96 w-96 rounded-full bg-teal-500/10 blur-3xl" />
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-sky-500/5" />
+        <div className="absolute top-1/4 -left-32 h-96 w-96 rounded-full bg-blue-500/10 blur-3xl" />
+        <div className="absolute bottom-1/4 -right-32 h-96 w-96 rounded-full bg-sky-500/10 blur-3xl" />
+        {/* Subtle gold glow */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-72 w-72 rounded-full bg-amber-400/5 blur-3xl" />
       </div>
 
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-12 gap-12 items-center">
           {/* Text content */}
           <div className="lg:col-span-7 space-y-6">
+            {/* Available badge — gold accent */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-1.5 text-sm font-medium text-emerald-600 dark:text-emerald-400"
+              className="inline-flex items-center gap-2 rounded-full border border-amber-400/40 bg-amber-400/10 px-4 py-1.5 text-sm font-medium text-amber-600 dark:text-amber-400"
             >
               <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-amber-400 opacity-75" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-amber-500" />
               </span>
               Available for opportunities
             </motion.div>
@@ -51,12 +54,12 @@ export default function HeroSection() {
               <p className="text-lg text-muted-foreground">Hi, I&apos;m</p>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
                 Ajibade{' '}
-                <span className="bg-gradient-to-r from-emerald-500 to-teal-500 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-blue-500 to-sky-500 bg-clip-text text-transparent">
                   Hassan
                 </span>
               </h1>
               <h2 className="text-2xl sm:text-3xl font-semibold text-muted-foreground">
-                {profile.role}
+                {profile.role} <span className="text-amber-500">&amp; AI Engineer</span>
               </h2>
             </motion.div>
 
@@ -78,7 +81,7 @@ export default function HeroSection() {
               <Button
                 asChild
                 size="lg"
-                className="bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white border-0"
+                className="bg-gradient-to-r from-blue-500 to-sky-500 hover:from-blue-600 hover:to-sky-600 text-white border-0"
               >
                 <a href="#projects" className="text-sm sm:text-base">
                   View My Work
@@ -108,7 +111,7 @@ export default function HeroSection() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={social.name}
-                    className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-background hover:border-emerald-500 hover:text-emerald-500 transition-colors"
+                    className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-background hover:border-blue-500 hover:text-blue-500 transition-colors"
                   >
                     <Icon className="h-4 w-4" />
                   </a>
@@ -129,11 +132,11 @@ export default function HeroSection() {
             className="lg:col-span-5"
           >
             <div className="relative mx-auto max-w-sm">
-              {/* Avatar placeholder with gradient */}
-              <div className="relative aspect-square rounded-3xl bg-gradient-to-br from-emerald-500 to-teal-500 p-1">
+              {/* Avatar card — blue gradient border */}
+              <div className="relative aspect-square rounded-3xl bg-gradient-to-br from-blue-500 to-sky-500 p-1">
                 <div className="h-full w-full rounded-3xl bg-background flex items-center justify-center overflow-hidden">
                   <div className="text-center p-8">
-                    <div className="mx-auto mb-4 flex h-24 w-24 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-500 text-white">
+                    <div className="mx-auto mb-4 flex h-24 w-24 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-sky-500 text-white">
                       <Sparkles className="h-10 w-10" />
                     </div>
                     <p className="text-2xl font-bold">
@@ -142,32 +145,33 @@ export default function HeroSection() {
                       {profile.lastName}
                     </p>
                     <p className="text-sm text-muted-foreground mt-1">{profile.role}</p>
+                    <p className="text-xs text-amber-500 mt-1 font-medium">AI Engineer</p>
                   </div>
                 </div>
               </div>
 
-              {/* Floating stat badges */}
+              {/* Floating stat badges — gold accents */}
               <motion.div
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-                className="absolute -top-4 -left-4 rounded-xl border border-border bg-background/90 backdrop-blur px-4 py-2 shadow-lg"
+                className="absolute -top-4 -left-4 rounded-xl border border-amber-400/30 bg-background/90 backdrop-blur px-4 py-2 shadow-lg"
               >
                 <p className="text-xs text-muted-foreground">Building</p>
-                <p className="text-sm font-bold">Web Apps</p>
+                <p className="text-sm font-bold text-amber-600 dark:text-amber-400">Web Apps</p>
               </motion.div>
               <motion.div
                 animate={{ y: [0, 10, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
-                className="absolute -bottom-4 -right-4 rounded-xl border border-border bg-background/90 backdrop-blur px-4 py-2 shadow-lg"
+                className="absolute -bottom-4 -right-4 rounded-xl border border-blue-400/30 bg-background/90 backdrop-blur px-4 py-2 shadow-lg"
               >
                 <p className="text-xs text-muted-foreground">Open to</p>
-                <p className="text-sm font-bold">Work</p>
+                <p className="text-sm font-bold text-blue-600 dark:text-blue-400">Work</p>
               </motion.div>
             </div>
           </motion.div>
         </div>
 
-        {/* Stats row */}
+        {/* Stats row — blue gradient numbers */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -177,7 +181,7 @@ export default function HeroSection() {
           {stats.map((stat) => (
             <Card key={stat.label} className="border-0 shadow-sm bg-muted/30">
               <CardContent className="p-5 text-center">
-                <p className="text-3xl font-bold bg-gradient-to-r from-emerald-500 to-teal-500 bg-clip-text text-transparent">
+                <p className="text-3xl font-bold bg-gradient-to-r from-blue-500 to-sky-500 bg-clip-text text-transparent">
                   {stat.value}
                 </p>
                 <p className="text-xs text-muted-foreground mt-1 uppercase tracking-wide">

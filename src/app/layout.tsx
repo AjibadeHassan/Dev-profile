@@ -16,29 +16,31 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ajibade Hassan — Full-Stack Web Developer",
+  title: "Ajibade Hassan — Full-Stack Developer & AI Engineer",
   description:
-    "Portfolio of Ajibade Hassan, a Full-Stack Web Developer building modern web applications with React, Next.js, TypeScript, Django, and more.",
+    "Portfolio of Ajibade Hassan, a Full-Stack Web Developer and AI Engineer building modern, AI-powered web applications with React, Next.js, TypeScript, Django, and LLM tooling.",
   keywords: [
     "Ajibade Hassan",
     "Full-Stack Developer",
+    "AI Engineer",
     "Web Developer",
     "React",
     "Next.js",
     "TypeScript",
     "Django",
+    "LLM",
     "Portfolio",
   ],
   authors: [{ name: "Ajibade Hassan" }],
   openGraph: {
-    title: "Ajibade Hassan — Full-Stack Web Developer",
-    description: "Building modern web applications with React, Next.js, TypeScript, and Django.",
+    title: "Ajibade Hassan — Full-Stack Developer & AI Engineer",
+    description: "Building modern, AI-powered web applications with React, Next.js, TypeScript, and Django.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ajibade Hassan — Full-Stack Web Developer",
-    description: "Building modern web applications with React, Next.js, TypeScript, and Django.",
+    title: "Ajibade Hassan — Full-Stack Developer & AI Engineer",
+    description: "Building modern, AI-powered web applications with React, Next.js, TypeScript, and Django.",
   },
 };
 

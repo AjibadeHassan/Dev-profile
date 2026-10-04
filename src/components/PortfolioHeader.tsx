@@ -56,11 +56,11 @@ export default function PortfolioHeader() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link href="#home" className="flex items-center gap-2 font-bold group">
-            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-emerald-500 to-teal-500 text-white transition-transform group-hover:scale-110">
+            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-blue-500 to-sky-500 text-white transition-transform group-hover:scale-110">
               <Code2 className="h-5 w-5" />
             </div>
             <span className="text-base sm:text-lg">
-              Ajibade<span className="text-emerald-500">.</span>
+              Ajibade<span className="text-blue-500">.</span>
             </span>
           </Link>
 
@@ -73,7 +73,7 @@ export default function PortfolioHeader() {
                 className={cn(
                   'relative px-3 py-2 text-sm font-medium transition-colors rounded-md',
                   activeSection === link.href.slice(1)
-                    ? 'text-emerald-500'
+                    ? 'text-blue-500'
                     : 'text-muted-foreground hover:text-foreground'
                 )}
               >
@@ -87,7 +87,7 @@ export default function PortfolioHeader() {
             <Button
               asChild
               size="sm"
-              className="hidden md:inline-flex bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white border-0"
+              className="hidden md:inline-flex bg-gradient-to-r from-blue-500 to-sky-500 hover:from-blue-600 hover:to-sky-600 text-white border-0"
             >
               <a href="#contact" className="text-sm">
                 Hire Me
@@ -118,7 +118,7 @@ export default function PortfolioHeader() {
                   <a
                     href="#contact"
                     onClick={() => setMobileOpen(false)}
-                    className="mt-2 px-3 py-2.5 rounded-md text-base font-medium text-center bg-gradient-to-r from-emerald-500 to-teal-500 text-white"
+                    className="mt-2 px-3 py-2.5 rounded-md text-base font-medium text-center bg-gradient-to-r from-blue-500 to-sky-500 text-white"
                   >
                     Hire Me
                   </a>

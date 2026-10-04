@@ -19,7 +19,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
       <Card
         className={cn(
           'group relative h-full overflow-hidden border-0 shadow-sm hover:shadow-xl transition-all duration-300',
-          project.featured && 'ring-1 ring-emerald-500/30'
+          project.featured && 'ring-1 ring-blue-500/30'
         )}
       >
         {/* Gradient accent strip */}
@@ -27,7 +27,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
 
         {project.featured && (
           <div className="absolute top-3 right-3 z-10">
-            <Badge className="bg-gradient-to-r from-emerald-500 to-teal-500 text-white border-0 gap-1">
+            <Badge className="bg-gradient-to-r from-amber-400 to-amber-500 text-amber-950 border-0 gap-1">
               <Star className="h-3 w-3 fill-current" />
               Featured
             </Badge>
@@ -46,7 +46,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
           </div>
 
           {/* Title + description */}
-          <h3 className="text-xl font-bold mb-2 group-hover:text-emerald-500 transition-colors">
+          <h3 className="text-xl font-bold mb-2 group-hover:text-blue-500 transition-colors">
             {project.title}
           </h3>
           <p className="text-sm text-muted-foreground leading-relaxed mb-4">
@@ -81,7 +81,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
             variant={project.liveUrl ? 'outline' : 'default'}
             className={cn(
               'flex-1',
-              !project.liveUrl && 'bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white border-0'
+              !project.liveUrl && 'bg-gradient-to-r from-blue-500 to-sky-500 hover:from-blue-600 hover:to-sky-600 text-white border-0'
             )}
           >
             <a href={project.codeUrl} target="_blank" rel="noopener noreferrer">
@@ -102,7 +102,7 @@ export default function ProjectsSection() {
   return (
     <section id="projects" className="py-20 sm:py-28 bg-muted/20">
       <div className="container mx-auto px-4">
-        {/* Section header */}
+        {/* Section header — gold eyebrow */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -110,7 +110,7 @@ export default function ProjectsSection() {
           transition={{ duration: 0.5 }}
           className="text-center mb-14"
         >
-          <p className="text-sm font-semibold text-emerald-500 uppercase tracking-widest mb-2">
+          <p className="text-sm font-semibold text-amber-500 dark:text-amber-400 uppercase tracking-widest mb-2">
             What I&apos;ve Built
           </p>
           <h2 className="text-3xl sm:text-4xl font-bold mb-3">Featured Projects</h2>
@@ -129,7 +129,7 @@ export default function ProjectsSection() {
             transition={{ duration: 0.5, delay: idx * 0.1 }}
             className="mb-8"
           >
-            <Card className="overflow-hidden border-0 shadow-sm hover:shadow-xl transition-shadow ring-1 ring-emerald-500/20">
+            <Card className="overflow-hidden border-0 shadow-sm hover:shadow-xl transition-shadow ring-1 ring-blue-500/20">
               <div className="grid md:grid-cols-2">
                 {/* Visual side */}
                 <div className={cn('relative min-h-[240px] bg-gradient-to-br p-8 flex items-center justify-center', project.accent)}>
@@ -147,7 +147,7 @@ export default function ProjectsSection() {
                 {/* Content side */}
                 <div className="p-6 sm:p-8 flex flex-col">
                   <div className="flex items-center gap-2 mb-3">
-                    <Badge className="bg-gradient-to-r from-emerald-500 to-teal-500 text-white border-0 gap-1">
+                    <Badge className="bg-gradient-to-r from-amber-400 to-amber-500 text-amber-950 border-0 gap-1">
                       <Star className="h-3 w-3 fill-current" />
                       Featured
                     </Badge>
@@ -181,7 +181,7 @@ export default function ProjectsSection() {
                     <Button
                       asChild
                       size="sm"
-                      className="bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white border-0"
+                      className="bg-gradient-to-r from-blue-500 to-sky-500 hover:from-blue-600 hover:to-sky-600 text-white border-0"
                     >
                       <a href={project.codeUrl} target="_blank" rel="noopener noreferrer">
                         <Github className="mr-1.5 h-3.5 w-3.5" />

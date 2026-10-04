@@ -25,7 +25,7 @@ export default function PortfolioFooter() {
           {/* Brand */}
           <div className="space-y-3">
             <Link href="#home" className="flex items-center gap-2 font-bold">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-emerald-500 to-teal-500 text-white">
+              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-blue-500 to-sky-500 text-white">
                 <Code2 className="h-4 w-4" />
               </div>
               <span>Ajibade Hassan</span>
@@ -43,7 +43,7 @@ export default function PortfolioFooter() {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="text-sm text-muted-foreground hover:text-emerald-500 transition-colors"
+                    className="text-sm text-muted-foreground hover:text-blue-500 transition-colors"
                   >
                     {link.label}
                   </a>
@@ -65,7 +65,7 @@ export default function PortfolioFooter() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={social.name}
-                    className="flex h-9 w-9 items-center justify-center rounded-lg border border-border bg-background hover:border-emerald-500 hover:text-emerald-500 transition-colors"
+                    className="flex h-9 w-9 items-center justify-center rounded-lg border border-border bg-background hover:border-blue-500 hover:text-blue-500 transition-colors"
                   >
                     <Icon className="h-4 w-4" />
                   </a>
@@ -74,7 +74,7 @@ export default function PortfolioFooter() {
             </div>
             <a
               href={`mailto:${profile.email}`}
-              className="inline-block text-sm text-muted-foreground hover:text-emerald-500 transition-colors break-all"
+              className="inline-block text-sm text-muted-foreground hover:text-blue-500 transition-colors break-all"
             >
               {profile.email}
             </a>
@@ -86,7 +86,7 @@ export default function PortfolioFooter() {
             © {new Date().getFullYear()} Ajibade Hassan. All rights reserved.
           </p>
           <p className="text-xs text-muted-foreground flex items-center gap-1.5">
-            Built with <Heart className="h-3 w-3 fill-red-500 text-red-500" /> using Next.js &amp; TypeScript
+            Built with <Heart className="h-3 w-3 fill-amber-400 text-amber-400" /> using Next.js &amp; TypeScript
           </p>
         </div>
       </div>

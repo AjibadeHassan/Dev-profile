@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
-import { Code2, Server, Wrench, User } from 'lucide-react'
+import { Code2, Server, Wrench, User, BrainCircuit } from 'lucide-react'
 import { profile, skills } from '@/lib/portfolio-data'
 
 const services = [
@@ -11,15 +11,22 @@ const services = [
     icon: Code2,
     title: 'Frontend Development',
     description: 'Building responsive, accessible, and beautiful user interfaces with React, Next.js, and TypeScript.',
-    color: 'text-emerald-500',
-    bg: 'bg-emerald-500/10',
+    color: 'text-blue-500',
+    bg: 'bg-blue-500/10',
   },
   {
     icon: Server,
     title: 'Backend Development',
     description: 'Designing robust APIs and server-side logic with Node.js, Python, Django, and REST architecture.',
-    color: 'text-teal-500',
-    bg: 'bg-teal-500/10',
+    color: 'text-sky-500',
+    bg: 'bg-sky-500/10',
+  },
+  {
+    icon: BrainCircuit,
+    title: 'AI Engineering',
+    description: 'Integrating LLMs, RAG pipelines, and intelligent features into web apps with modern AI tooling.',
+    color: 'text-amber-500',
+    bg: 'bg-amber-500/10',
   },
   {
     icon: Wrench,
@@ -42,7 +49,8 @@ export default function AboutSection() {
           transition={{ duration: 0.5 }}
           className="text-center mb-14"
         >
-          <p className="text-sm font-semibold text-emerald-500 uppercase tracking-widest mb-2">
+          {/* Gold eyebrow */}
+          <p className="text-sm font-semibold text-amber-500 dark:text-amber-400 uppercase tracking-widest mb-2">
             Get To Know Me
           </p>
           <h2 className="text-3xl sm:text-4xl font-bold">About Me</h2>
@@ -58,7 +66,7 @@ export default function AboutSection() {
             className="lg:col-span-7 space-y-5"
           >
             <div className="flex items-center gap-2 mb-2">
-              <User className="h-5 w-5 text-emerald-500" />
+              <User className="h-5 w-5 text-blue-500" />
               <h3 className="text-xl font-semibold">Who I Am</h3>
             </div>
             {profile.bio.map((paragraph, idx) => (
@@ -67,8 +75,8 @@ export default function AboutSection() {
               </p>
             ))}
 
-            {/* Service cards */}
-            <div className="grid sm:grid-cols-3 gap-4 pt-4">
+            {/* Service cards — now 4 in a 2x2 grid */}
+            <div className="grid sm:grid-cols-2 gap-4 pt-4">
               {services.map((service) => {
                 const Icon = service.icon
                 return (
@@ -88,7 +96,7 @@ export default function AboutSection() {
             </div>
 
             <div className="pt-2">
-              <Button asChild className="bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white border-0">
+              <Button asChild className="bg-gradient-to-r from-blue-500 to-sky-500 hover:from-blue-600 hover:to-sky-600 text-white border-0">
                 <a href="#contact">Let&apos;s Work Together</a>
               </Button>
             </div>
@@ -106,7 +114,7 @@ export default function AboutSection() {
             <Card className="border-0 shadow-sm bg-muted/30">
               <CardContent className="p-6">
                 <div className="flex items-center gap-2 mb-6">
-                  <Wrench className="h-5 w-5 text-emerald-500" />
+                  <Wrench className="h-5 w-5 text-blue-500" />
                   <h3 className="text-xl font-semibold">My Skills</h3>
                 </div>
                 <div className="space-y-6">
@@ -119,7 +127,7 @@ export default function AboutSection() {
                         {items.map((skill) => (
                           <span
                             key={skill}
-                            className="inline-flex items-center rounded-full border border-border bg-background px-3 py-1 text-sm font-medium hover:border-emerald-500 hover:text-emerald-500 transition-colors cursor-default"
+                            className="inline-flex items-center rounded-full border border-border bg-background px-3 py-1 text-sm font-medium hover:border-amber-400 hover:text-amber-500 transition-colors cursor-default"
                           >
                             {skill}
                           </span>

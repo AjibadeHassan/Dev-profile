@@ -7,12 +7,12 @@ export const profile = {
   lastName: 'Hassan',
   role: 'Full-Stack Web Developer',
   location: 'Lagos, Nigeria',
-  email: 'ajibadehassan.dev@gmail.com',
+  email: 'hassanajibade17@gmail.com',
   available: true,
   tagline:
-    'I build the front-end and back-end of web applications — and the integration between client and server that makes the whole product work.',
+    'Full-Stack Web Developer and AI Engineer building modern web applications end-to-end — from intuitive interfaces to robust APIs and intelligent, AI-powered features.',
   bio: [
-    "I'm a Full-Stack Web Developer who loves turning ideas into polished, production-ready web applications. From crafting responsive, accessible interfaces with React and Next.js to designing robust APIs with Django and Node.js, I work across the entire stack.",
+    "I'm a Full-Stack Web Developer and AI Engineer who loves turning ideas into polished, production-ready web applications. From crafting responsive, accessible interfaces with React and Next.js to designing robust APIs with Django and Node.js — and layering in AI-powered features with modern LLM and machine learning tooling — I work across the entire stack.",
     "I'm open to job opportunities where I can contribute, learn, and grow. If you have a role that matches my skills and experience, don't hesitate to reach out.",
   ],
   resumeUrl: '#',
@@ -42,6 +42,7 @@ export const socials = [
 export const skills = {
   Frontend: ['React', 'Next.js', 'TypeScript', 'JavaScript', 'HTML5', 'CSS3', 'SCSS', 'Tailwind CSS', 'Responsive Design'],
   Backend: ['Node.js', 'Python', 'Django', 'REST API', 'PostgreSQL', 'MySQL', 'Prisma'],
+  'AI Engineering': ['LLM Integration', 'Prompt Engineering', 'RAG', 'OpenAI API', 'LangChain', 'Vector Databases', 'Model Fine-Tuning'],
   Tools: ['Git', 'GitHub', 'Docker', 'Jest', 'Vite', 'Webpack', 'Linux/Terminal', 'SEO'],
 }
 
@@ -71,7 +72,7 @@ export const projects: Project[] = [
     liveUrl: 'https://github.com/AjibadeHassan/e-hospital-app',
     codeUrl: 'https://github.com/AjibadeHassan/e-hospital-app',
     featured: true,
-    accent: 'from-emerald-500 to-teal-500',
+    accent: 'from-blue-500 to-sky-500',
   },
   {
     id: 'django-rest-react',
@@ -83,7 +84,7 @@ export const projects: Project[] = [
       'Full-stack project demonstrating end-to-end integration between a Django REST Framework backend and a React frontend. Includes JWT authentication, serialized models, and a responsive React UI consuming the API.',
     tech: ['Django', 'Django REST Framework', 'React', 'Python', 'JavaScript', 'PostgreSQL'],
     codeUrl: 'https://github.com/AjibadeHassan/django-rest-and-react',
-    accent: 'from-cyan-500 to-blue-500',
+    accent: 'from-blue-600 to-indigo-500',
   },
   {
     id: 'e-commerce-react',
@@ -95,7 +96,7 @@ export const projects: Project[] = [
       'Service-booking and product-ordering platform. Customers can request cleaning services, browse related products, add them to a cart, and complete checkout. Includes an admin dashboard for managing orders and inventory.',
     tech: ['React', 'JavaScript', 'CSS3', 'REST API'],
     codeUrl: 'https://github.com/AjibadeHassan/e-commerce-with-react',
-    accent: 'from-amber-500 to-orange-500',
+    accent: 'from-sky-500 to-cyan-500',
   },
   {
     id: 'job-finder',
@@ -107,7 +108,7 @@ export const projects: Project[] = [
       'Job search interface with filtering by location, role, and seniority. Users can save listings and track applications. Built with a clean, accessible UI.',
     tech: ['React', 'JavaScript', 'HTML5', 'CSS3'],
     codeUrl: 'https://github.com/AjibadeHassan/job-finder',
-    accent: 'from-violet-500 to-purple-500',
+    accent: 'from-indigo-500 to-blue-500',
   },
   {
     id: 'budget-app',
@@ -119,7 +120,7 @@ export const projects: Project[] = [
       'Personal finance tracker with income and expense logging, category breakdowns, and visual charts showing spending trends over time.',
     tech: ['JavaScript', 'HTML5', 'CSS3'],
     codeUrl: 'https://github.com/AjibadeHassan/Budget-app',
-    accent: 'from-rose-500 to-pink-500',
+    accent: 'from-sky-500 to-blue-500',
   },
   {
     id: 'dev-profile',
@@ -132,7 +133,7 @@ export const projects: Project[] = [
     tech: ['Next.js 16', 'TypeScript', 'Tailwind CSS', 'shadcn/ui', 'Prisma', 'Framer Motion'],
     liveUrl: '#',
     codeUrl: 'https://github.com/AjibadeHassan/Dev-profile',
-    accent: 'from-slate-500 to-gray-600',
+    accent: 'from-blue-500 to-indigo-600',
   },
 ]
 

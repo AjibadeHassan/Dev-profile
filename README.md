@@ -1,17 +1,23 @@
 # Ajibade Hassan — Developer Portfolio
 
-A modern, animated developer portfolio built with Next.js 16, TypeScript, Tailwind CSS, and shadcn/ui. Features dark/light mode, smooth scroll navigation, responsive design, and a working contact form backed by a Prisma database.
+A modern, animated developer portfolio built with Next.js 16, TypeScript, Tailwind CSS, and shadcn/ui. Features a blue + golden-yellow accent theme, dark/light mode, smooth scroll navigation, responsive design, and a working contact form backed by a Prisma database.
 
 ## Features
 
-- **Hero Section** — Animated intro with name, role, social links, and floating stat badges
-- **About Section** — Bio, service cards (Frontend / Backend / Full-Stack), and categorized skills
-- **Projects Section** — Featured project showcase + grid of other projects with live/code links
-- **Contact Section** — Working contact form (POST /api/contact → saved to SQLite via Prisma) + social links
+- **Hero Section** — Animated intro with name, role (Full-Stack Developer & AI Engineer), social links, golden floating stat badges, and a stats row
+- **About Section** — Bio, 4 service cards (Frontend / Backend / AI Engineering / Full-Stack Integration), and categorized skills including an AI Engineering category
+- **Projects Section** — Featured project showcase + grid of other projects with live/code links; the E-Hospital Management System is the featured project
+- **Contact Section** — Working contact form (POST /api/contact → saved to SQLite via Prisma) + email, location, and social cards
 - **Dark/Light Mode** — Theme toggle with system preference detection (next-themes)
 - **Responsive** — Mobile-first design with hamburger menu on small screens
 - **Animated** — Framer Motion entrance animations and scroll reveals
 - **Accessible** — Semantic HTML, ARIA labels, keyboard navigation
+
+## Design System
+
+- **Primary gradient**: `blue-500 → sky-500` (buttons, accents, hero name, stats)
+- **Accent color**: `amber-400 / amber-500` (section eyebrows, "Featured" badges, floating badges, footer heart)
+- **Theme**: Light/dark with system preference, emerald/teal-free palette
 
 ## Tech Stack
 
@@ -53,9 +59,9 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 All portfolio content lives in [`src/lib/portfolio-data.ts`](src/lib/portfolio-data.ts). Edit this single file to update:
 
-- Your name, role, bio, and location
+- Your name, role, bio, location, and email
 - Social links (GitHub, LinkedIn, Twitter)
-- Skills (categorized)
+- Skills (categorized — Frontend, Backend, AI Engineering, Tools)
 - Projects (title, description, tech stack, links)
 - Stats shown in the hero section
 

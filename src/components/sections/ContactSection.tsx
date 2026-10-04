@@ -63,13 +63,14 @@ export default function ContactSection() {
 
   return (
     <section id="contact" className="py-20 sm:py-28 relative overflow-hidden">
-      {/* Background */}
+      {/* Background — blue + subtle gold */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[400px] w-[600px] rounded-full bg-emerald-500/5 blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[400px] w-[600px] rounded-full bg-blue-500/5 blur-3xl" />
+        <div className="absolute top-1/3 right-1/4 h-64 w-64 rounded-full bg-amber-400/5 blur-3xl" />
       </div>
 
       <div className="container mx-auto px-4">
-        {/* Section header */}
+        {/* Section header — gold eyebrow */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -77,7 +78,7 @@ export default function ContactSection() {
           transition={{ duration: 0.5 }}
           className="text-center mb-14"
         >
-          <p className="text-sm font-semibold text-emerald-500 uppercase tracking-widest mb-2">
+          <p className="text-sm font-semibold text-amber-500 dark:text-amber-400 uppercase tracking-widest mb-2">
             Get In Touch
           </p>
           <h2 className="text-3xl sm:text-4xl font-bold mb-3">Let&apos;s Work Together</h2>
@@ -96,17 +97,18 @@ export default function ContactSection() {
             transition={{ duration: 0.5 }}
             className="lg:col-span-2 space-y-4"
           >
-            <Card className="border-0 shadow-sm bg-gradient-to-br from-emerald-500/10 to-teal-500/5">
+            {/* Email card — blue gradient */}
+            <Card className="border-0 shadow-sm bg-gradient-to-br from-blue-500/10 to-sky-500/5">
               <CardContent className="p-6">
                 <div className="flex items-start gap-4">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-gradient-to-br from-emerald-500 to-teal-500 text-white flex-shrink-0">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-gradient-to-br from-blue-500 to-sky-500 text-white flex-shrink-0">
                     <Mail className="h-5 w-5" />
                   </div>
                   <div className="min-w-0">
                     <p className="text-xs text-muted-foreground uppercase tracking-wide">Email</p>
                     <a
                       href={`mailto:${profile.email}`}
-                      className="text-sm font-medium hover:text-emerald-500 transition-colors break-all"
+                      className="text-sm font-medium hover:text-blue-500 transition-colors break-all"
                     >
                       {profile.email}
                     </a>
@@ -115,10 +117,11 @@ export default function ContactSection() {
               </CardContent>
             </Card>
 
+            {/* Location card — gold icon accent */}
             <Card className="border-0 shadow-sm">
               <CardContent className="p-6">
                 <div className="flex items-start gap-4">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-gradient-to-br from-cyan-500 to-blue-500 text-white flex-shrink-0">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-gradient-to-br from-amber-400 to-amber-500 text-amber-950 flex-shrink-0">
                     <MapPin className="h-5 w-5" />
                   </div>
                   <div>
@@ -130,6 +133,7 @@ export default function ContactSection() {
               </CardContent>
             </Card>
 
+            {/* Socials card */}
             <Card className="border-0 shadow-sm">
               <CardContent className="p-6">
                 <p className="text-xs text-muted-foreground uppercase tracking-wide mb-4">Follow Me</p>
@@ -143,7 +147,7 @@ export default function ContactSection() {
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label={social.name}
-                        className="flex h-11 w-11 items-center justify-center rounded-lg border border-border bg-background hover:border-emerald-500 hover:text-emerald-500 transition-colors"
+                        className="flex h-11 w-11 items-center justify-center rounded-lg border border-border bg-background hover:border-blue-500 hover:text-blue-500 transition-colors"
                       >
                         <Icon className="h-4 w-4" />
                       </a>
@@ -165,13 +169,13 @@ export default function ContactSection() {
             <Card className="border-0 shadow-sm">
               <CardContent className="p-6 sm:p-8">
                 <div className="flex items-center gap-2 mb-6">
-                  <MessageSquare className="h-5 w-5 text-emerald-500" />
+                  <MessageSquare className="h-5 w-5 text-blue-500" />
                   <h3 className="text-lg font-semibold">Send Me a Message</h3>
                 </div>
 
                 {success && (
-                  <Alert className="mb-6 border-emerald-200 bg-emerald-50 text-emerald-800 dark:bg-emerald-950/50 dark:text-emerald-300 dark:border-emerald-800">
-                    <CheckCircle2 className="h-4 w-4 text-emerald-600" />
+                  <Alert className="mb-6 border-blue-200 bg-blue-50 text-blue-800 dark:bg-blue-950/50 dark:text-blue-300 dark:border-blue-800">
+                    <CheckCircle2 className="h-4 w-4 text-blue-600" />
                     <AlertDescription>
                       Message sent successfully! I&apos;ll get back to you soon.
                     </AlertDescription>
@@ -219,7 +223,7 @@ export default function ContactSection() {
                   <Button
                     type="submit"
                     disabled={submitting}
-                    className="w-full bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white border-0 h-11"
+                    className="w-full bg-gradient-to-r from-blue-500 to-sky-500 hover:from-blue-600 hover:to-sky-600 text-white border-0 h-11"
                   >
                     {submitting ? (
                       <>
