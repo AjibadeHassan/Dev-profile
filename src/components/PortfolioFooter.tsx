@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { Github, Linkedin, Twitter, Heart } from 'lucide-react'
+import { Github, Linkedin, Twitter } from 'lucide-react'
 import { profile, socials } from '@/lib/portfolio-data'
 
 const socialIcons = {
@@ -92,8 +92,8 @@ export default function PortfolioFooter() {
           <p className="text-xs text-muted-foreground">
             © {new Date().getFullYear()} Ajibade Hassan. All rights reserved.
           </p>
-          <p className="text-xs text-muted-foreground flex items-center gap-1.5">
-            Built with <Heart className="h-3 w-3 fill-amber-400 text-amber-400" /> using Next.js &amp; TypeScript
+          <p className="text-xs text-muted-foreground">
+            Built with Next.js &amp; TypeScript
           </p>
         </div>
       </div>
