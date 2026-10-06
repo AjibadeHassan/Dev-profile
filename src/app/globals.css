@@ -119,4 +119,18 @@
   body {
     @apply bg-background text-foreground;
   }
+  /* Ensure pointer cursor on all interactive elements (Tailwind v4 removed this default) */
+  button,
+  a,
+  [role="button"],
+  select,
+  summary,
+  label[for],
+  [tabindex]:not([tabindex="-1"]) {
+    cursor: pointer;
+  }
+  button:disabled,
+  [aria-disabled="true"] {
+    cursor: not-allowed;
+  }
 }
