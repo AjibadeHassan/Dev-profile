@@ -1,7 +1,8 @@
 'use client'
 
 import Link from 'next/link'
-import { Github, Linkedin, Twitter, Code2, Heart } from 'lucide-react'
+import Image from 'next/image'
+import { Github, Linkedin, Twitter, Heart } from 'lucide-react'
 import { profile, socials } from '@/lib/portfolio-data'
 
 const socialIcons = {
@@ -25,8 +26,14 @@ export default function PortfolioFooter() {
           {/* Brand */}
           <div className="space-y-3">
             <Link href="#home" className="flex items-center gap-2 font-bold">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-blue-500 to-sky-500 text-white">
-                <Code2 className="h-4 w-4" />
+              <div className="relative h-8 w-8 overflow-hidden rounded-lg ring-2 ring-blue-500/30">
+                <Image
+                  src="/hassan.jpg"
+                  alt="Ajibade Hassan"
+                  width={32}
+                  height={32}
+                  className="h-full w-full object-cover"
+                />
               </div>
               <span>Ajibade Hassan</span>
             </Link>

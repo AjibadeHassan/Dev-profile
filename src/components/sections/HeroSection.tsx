@@ -2,10 +2,11 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { ResumeModal } from '@/components/ResumeModal'
-import { Github, Linkedin, Twitter, ArrowRight, MapPin, Sparkles, FileText } from 'lucide-react'
+import { Github, Linkedin, Twitter, ArrowRight, MapPin, FileText } from 'lucide-react'
 import { profile, socials, stats } from '@/lib/portfolio-data'
 
 const socialIcons = {
@@ -145,20 +146,26 @@ export default function HeroSection() {
             className="lg:col-span-5"
           >
             <div className="relative mx-auto max-w-sm">
-              {/* Avatar card — blue gradient border */}
+              {/* Avatar card — photo with blue gradient ring */}
               <div className="relative aspect-square rounded-3xl bg-gradient-to-br from-blue-500 to-sky-500 p-1">
-                <div className="h-full w-full rounded-3xl bg-background flex items-center justify-center overflow-hidden">
-                  <div className="text-center p-8">
-                    <div className="mx-auto mb-4 flex h-24 w-24 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-sky-500 text-white">
-                      <Sparkles className="h-10 w-10" />
-                    </div>
-                    <p className="text-2xl font-bold">
-                      {profile.firstName}
-                      <br />
-                      {profile.lastName}
+                <div className="relative h-full w-full rounded-3xl bg-background overflow-hidden">
+                  <Image
+                    src="/hassan.jpg"
+                    alt={`${profile.firstName} ${profile.lastName} — ${profile.role}`}
+                    fill
+                    className="object-cover object-top"
+                    priority
+                    sizes="(max-width: 768px) 100vw, 400px"
+                  />
+                  {/* Subtle gradient overlay for text legibility */}
+                  <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-background via-background/80 to-transparent" />
+                  {/* Name/role overlay */}
+                  <div className="absolute bottom-0 inset-x-0 p-6 text-center">
+                    <p className="text-xl font-bold">
+                      {profile.firstName} {profile.lastName}
                     </p>
-                    <p className="text-sm text-muted-foreground mt-1">{profile.role}</p>
-                    <p className="text-xs text-amber-500 mt-1 font-medium">AI Engineer</p>
+                    <p className="text-xs text-muted-foreground mt-0.5">{profile.role}</p>
+                    <p className="text-xs text-amber-500 mt-0.5 font-medium">AI Engineer</p>
                   </div>
                 </div>
               </div>

@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Code2, Server, Wrench, User, BrainCircuit, Download } from 'lucide-react'
@@ -69,11 +70,26 @@ export default function AboutSection() {
               <User className="h-5 w-5 text-blue-500" />
               <h3 className="text-xl font-semibold">Who I Am</h3>
             </div>
-            {profile.bio.map((paragraph, idx) => (
-              <p key={idx} className="text-muted-foreground leading-relaxed">
-                {paragraph}
-              </p>
-            ))}
+
+            {/* Photo + intro row */}
+            <div className="flex flex-col sm:flex-row gap-5 items-start">
+              <div className="relative h-28 w-28 flex-shrink-0 overflow-hidden rounded-2xl ring-2 ring-blue-500/30">
+                <Image
+                  src="/hassan.jpg"
+                  alt={`${profile.firstName} ${profile.lastName}`}
+                  fill
+                  className="object-cover object-top"
+                  sizes="112px"
+                />
+              </div>
+              <div className="space-y-3 flex-1">
+                {profile.bio.map((paragraph, idx) => (
+                  <p key={idx} className="text-muted-foreground leading-relaxed">
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
+            </div>
 
             {/* Service cards — now 4 in a 2x2 grid */}
             <div className="grid sm:grid-cols-2 gap-4 pt-4">

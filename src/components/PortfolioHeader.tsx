@@ -5,7 +5,8 @@ import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from '@/components/ui/sheet'
 import { ThemeToggle } from '@/components/ThemeToggle'
-import { Menu, Code2 } from 'lucide-react'
+import { Menu } from 'lucide-react'
+import Image from 'next/image'
 import { cn } from '@/lib/utils'
 
 const navLinks = [
@@ -56,8 +57,15 @@ export default function PortfolioHeader() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link href="#home" className="flex items-center gap-2 font-bold group">
-            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-blue-500 to-sky-500 text-white transition-transform group-hover:scale-110">
-              <Code2 className="h-5 w-5" />
+            <div className="relative h-9 w-9 overflow-hidden rounded-lg ring-2 ring-blue-500/30 transition-transform group-hover:scale-110">
+              <Image
+                src="/hassan.jpg"
+                alt="Ajibade Hassan"
+                width={36}
+                height={36}
+                className="h-full w-full object-cover"
+                priority
+              />
             </div>
             <span className="text-base sm:text-lg">
               Ajibade<span className="text-blue-500">.</span>
