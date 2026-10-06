@@ -2,6 +2,7 @@
 
 import PortfolioHeader from '@/components/PortfolioHeader'
 import PortfolioFooter from '@/components/PortfolioFooter'
+import { AIChat } from '@/components/AIChat'
 import HeroSection from '@/components/sections/HeroSection'
 import AboutSection from '@/components/sections/AboutSection'
 import ProjectsSection from '@/components/sections/ProjectsSection'
@@ -18,6 +19,7 @@ export default function Home() {
         <ContactSection />
       </main>
       <PortfolioFooter />
+      <AIChat />
     </div>
   )
 }
