@@ -1,9 +1,11 @@
 'use client'
 
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
-import { Github, Linkedin, Twitter, ArrowRight, MapPin, Sparkles } from 'lucide-react'
+import { ResumeModal } from '@/components/ResumeModal'
+import { Github, Linkedin, Twitter, ArrowRight, MapPin, Sparkles, FileText } from 'lucide-react'
 import { profile, socials, stats } from '@/lib/portfolio-data'
 
 const socialIcons = {
@@ -13,6 +15,8 @@ const socialIcons = {
 }
 
 export default function HeroSection() {
+  const [resumeOpen, setResumeOpen] = useState(false)
+
   return (
     <section
       id="home"
@@ -92,6 +96,15 @@ export default function HeroSection() {
                 <a href="#contact" className="text-sm sm:text-base">
                   Get In Touch
                 </a>
+              </Button>
+              <Button
+                size="lg"
+                variant="ghost"
+                onClick={() => setResumeOpen(true)}
+                className="text-sm sm:text-base text-amber-600 dark:text-amber-400 hover:text-amber-500 hover:bg-amber-500/10"
+              >
+                <FileText className="mr-2 h-4 w-4" />
+                View Resume
               </Button>
             </motion.div>
 
@@ -192,6 +205,9 @@ export default function HeroSection() {
           ))}
         </motion.div>
       </div>
+
+      {/* Resume preview modal */}
+      <ResumeModal open={resumeOpen} onOpenChange={setResumeOpen} />
     </section>
   )
 }

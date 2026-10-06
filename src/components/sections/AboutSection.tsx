@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
-import { Code2, Server, Wrench, User, BrainCircuit } from 'lucide-react'
+import { Code2, Server, Wrench, User, BrainCircuit, Download } from 'lucide-react'
 import { profile, skills } from '@/lib/portfolio-data'
 
 const services = [
@@ -95,9 +95,15 @@ export default function AboutSection() {
               })}
             </div>
 
-            <div className="pt-2">
+            <div className="pt-2 flex flex-wrap gap-3">
               <Button asChild className="bg-gradient-to-r from-blue-500 to-sky-500 hover:from-blue-600 hover:to-sky-600 text-white border-0">
                 <a href="#contact">Let&apos;s Work Together</a>
+              </Button>
+              <Button asChild variant="outline">
+                <a href={profile.resumeUrl} download="Ajibade-Hassan-Resume.pdf">
+                  <Download className="mr-2 h-4 w-4" />
+                  Download Resume
+                </a>
               </Button>
             </div>
           </motion.div>

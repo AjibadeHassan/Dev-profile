@@ -15,7 +15,7 @@ export const profile = {
     "I'm a Full-Stack Web Developer and AI Engineer who loves turning ideas into polished, production-ready web applications. From crafting responsive, accessible interfaces with React and Next.js to designing robust APIs with Django and Node.js — and layering in AI-powered features with modern LLM and machine learning tooling — I work across the entire stack.",
     "I'm open to job opportunities where I can contribute, learn, and grow. If you have a role that matches my skills and experience, don't hesitate to reach out.",
   ],
-  resumeUrl: '#',
+  resumeUrl: '/resume.pdf',
 }
 
 export const socials = [
