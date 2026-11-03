@@ -69,7 +69,7 @@ export const projects: Project[] = [
     longDescription:
       'Full-stack healthcare management system with role-based dashboards for patients and doctors. Features include appointment booking with live time-slot availability, medical records management, prescriptions with refill requests, a real-time notification center, and configurable notification preferences. Built with Next.js 16 App Router, Prisma ORM, and a complete REST API.',
     tech: ['Next.js 16', 'TypeScript', 'Prisma', 'SQLite', 'shadcn/ui', 'Tailwind CSS', 'Zustand', 'React Hook Form', 'Zod'],
-    liveUrl: 'https://github.com/AjibadeHassan/e-hospital-app',
+    liveUrl: 'https://e-hospital-app.vercel.app/',
     codeUrl: 'https://github.com/AjibadeHassan/e-hospital-app',
     featured: true,
     accent: 'from-blue-500 to-sky-500',
